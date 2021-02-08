@@ -69,6 +69,7 @@
     <metadatamappingVersion>1.3.1</metadatamappingVersion>
     <metadatasharingVersion>1.2.2</metadatasharingVersion>
     <operationtheaterVersion>1.2.1</operationtheaterVersion>
+    <openmrsERPVersion>1.0.0</openmrsERPVersion>
     <owaVersion>1.9.0</owaVersion>
     <providermanagementVersion>2.5.0</providermanagementVersion>
     <reportingVersion>1.16.0</reportingVersion>
@@ -299,6 +300,11 @@
       <groupId>org.openmrs.module</groupId>
       <artifactId>initializer-omod</artifactId>
       <version>${initializerVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>erp-omod</artifactId>
+      <version>${openmrsERPVersion}</version>
     </dependency>
 
     <!-- Odoo deps -->
