@@ -1,0 +1,51 @@
+apps:
+  openmrs:
+    enabled: true
+    image: mekomsolutions/openmrs
+  appointments:
+    enabled: true
+    image: mekomsolutions/appointments
+  bahmni_config:
+    enabled: true
+    image: nginx:alpine
+  bahmni_filestore:
+    image: nginx:alpine
+    enabled: true
+  bahmni_mart:
+    image: mekomsolutions/bahmni-mart
+    enabled: true
+  bahmni_reports:
+    image: mekomsolutions/bahmni-reports
+    enabled: true
+  bahmniapps:
+    image: mekomsolutions/bahmniapps
+    enabled: true
+  implementer_interface:
+    image: mekomsolutions/implementer-interface
+    enabled: true
+  metabase:
+    image: mekomsolutions/metabase
+    enabled: true
+  mysql:
+    image: mariadb:10.3
+    enabled: true
+  odoo:
+    image: mekomsolutions/odoo
+    enabled: true
+  odoo_connect:
+    image: mekomsolutions/odoo-connect
+    enabled: true
+  openelis:
+    image: enyachoke/openelis
+    initImage: enyachoke/openelis-init
+    enabled: true
+  openmrs:
+    initImage: mariadb:10.3
+    image: mekomsolutions/openmrs
+    enabled: true
+  postgresql:
+    image: postgres:9.6-alpine
+    enabled: true
+  proxy:
+    image: enyachoke/proxy:latest
+    enabled: true
