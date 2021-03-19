@@ -42,6 +42,7 @@
 
     <!-- In dev -->
     <initializerVersion>2.1.0-SNAPSHOT</initializerVersion>
+    <postbahmniVersion>1.0.0-SNAPSHOT</postbahmniVersion>
 
     <!-- Bahmni modules -->
     <appointmentsVersion>1.2.1</appointmentsVersion>
@@ -305,6 +306,11 @@
       <groupId>org.openmrs.module</groupId>
       <artifactId>erp-omod</artifactId>
       <version>${openmrsERPVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>postbahmni-omod</artifactId>
+      <version>${postbahmniVersion}</version>
     </dependency>
 
     <!-- Odoo deps -->
