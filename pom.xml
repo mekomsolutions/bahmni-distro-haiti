@@ -38,7 +38,7 @@
     <odooconfigVersion>1.0.0-SNAPSHOT</odooconfigVersion>
 
     <!-- Bahmni Apps -->
-    <bahmniappsRevision>32e623c</bahmniappsRevision>
+    <bahmniappsRevision>629d510</bahmniappsRevision>
 
     <!-- In dev -->
     <initializerVersion>2.1.0-SNAPSHOT</initializerVersion>
