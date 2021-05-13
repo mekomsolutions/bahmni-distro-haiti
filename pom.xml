@@ -58,7 +58,7 @@
     <!-- OpenMRS modules -->
     <addresshierarchyVersion>2.12.0</addresshierarchyVersion>
     <appframeworkVersion>2.10.0</appframeworkVersion>
-    <auditLogVersion>1.1-SNAPSHOT</auditLogVersion>
+    <forkedAuditLogVersion>1.1-1.0.0</forkedAuditLogVersion>
     <bacteriologyVersion>1.2.0</bacteriologyVersion>
     <calculationVersion>1.2</calculationVersion>
     <emrapiVersion>1.24.8</emrapiVersion>
@@ -290,7 +290,7 @@
     <dependency>
       <groupId>org.openmrs.module</groupId>
       <artifactId>auditlog-omod</artifactId>
-      <version>${auditLogVersion}</version>
+      <version>${forkedAuditLogVersion}</version>
     </dependency>
     <dependency>
       <groupId>org.ict4h.openmrs</groupId>
