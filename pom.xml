@@ -55,7 +55,7 @@
     <postbahmniVersion>1.0.0</postbahmniVersion>
 
     <!-- OpenMRS modules -->
-    <addresshierarchyVersion>2.12.0</addresshierarchyVersion>
+    <forkedAddresshierarchyVersion>2.11.0-1.0.0</forkedAddresshierarchyVersion>
     <appframeworkVersion>2.10.0</appframeworkVersion>
     <bacteriologyVersion>1.2.0</bacteriologyVersion>
     <calculationVersion>1.2</calculationVersion>
@@ -273,7 +273,7 @@
     <dependency>
       <groupId>org.openmrs.module</groupId>
       <artifactId>addresshierarchy-omod</artifactId>
-      <version>${addresshierarchyVersion}</version>
+      <version>${forkedAddresshierarchyVersion}</version>
     </dependency>
     <dependency>
       <groupId>org.openmrs.module</groupId>
