@@ -55,13 +55,12 @@
     <postbahmniVersion>1.0.0</postbahmniVersion>
 
     <!-- OpenMRS modules -->
-    <forkedAddresshierarchyVersion>2.11.0-1.0.0</forkedAddresshierarchyVersion>
+    <addresshierarchyVersion>2.12.0</addresshierarchyVersion>
     <appframeworkVersion>2.10.0</appframeworkVersion>
     <bacteriologyVersion>1.2.0</bacteriologyVersion>
     <calculationVersion>1.2</calculationVersion>
     <emrapiVersion>1.24.8</emrapiVersion>
     <eventVersion>2.8.0</eventVersion>
-    <exti18nVersion>1.0.0</exti18nVersion>
     <htmlwidgetsVersion>1.8.0</htmlwidgetsVersion>
     <idgenVersion>4.6.0</idgenVersion>
     <initializerVersion>2.1.0</initializerVersion>
@@ -257,11 +256,6 @@
     </dependency>
     <dependency>
       <groupId>org.openmrs.module</groupId>
-      <artifactId>exti18n-omod</artifactId>
-      <version>${exti18nVersion}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openmrs.module</groupId>
       <artifactId>idgen-omod</artifactId>
       <version>${idgenVersion}</version>
     </dependency>
@@ -273,7 +267,7 @@
     <dependency>
       <groupId>org.openmrs.module</groupId>
       <artifactId>addresshierarchy-omod</artifactId>
-      <version>${forkedAddresshierarchyVersion}</version>
+      <version>${addresshierarchyVersion}</version>
     </dependency>
     <dependency>
       <groupId>org.openmrs.module</groupId>
