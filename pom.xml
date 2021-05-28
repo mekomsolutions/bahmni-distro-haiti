@@ -33,7 +33,7 @@
     <openMRSVersion>2.1.3</openMRSVersion>
 
     <!-- Configs -->
-    <openmrsconfigVersion>1.2.0-SNAPSHOT</openmrsconfigVersion>
+    <openmrsconfigVersion>1.3.0-SNAPSHOT</openmrsconfigVersion>
     <bahmniconfigVersion>1.3.0-SNAPSHOT</bahmniconfigVersion>
     <odooconfigVersion>1.0.0</odooconfigVersion>
 
@@ -82,9 +82,6 @@
     <!-- Bahmni Reports -->
     <bahmniReportsVersion>0.92.1</bahmniReportsVersion>
 
-    <!-- OpenERP Atomfeed Service -->
-    <forkedOpenErpAtomfeedServiceVersion>0.94-1.0.0</forkedOpenErpAtomfeedServiceVersion>
-
     <!-- Odoo addons -->
     <odooInitializerVersion>1.1.0</odooInitializerVersion>
     <priceRecalculationVersion>10.0.1.0.0</priceRecalculationVersion>
@@ -102,12 +99,6 @@
       <artifactId>reports</artifactId>
       <type>war</type>
       <version>${bahmniReportsVersion}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.bahmni.openerp</groupId>
-      <artifactId>openerp-atomfeed-service</artifactId>
-      <type>war</type>
-      <version>${forkedOpenErpAtomfeedServiceVersion}</version>
     </dependency>
     <dependency>
       <groupId>net.mekomsolutions</groupId>
