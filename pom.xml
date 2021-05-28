@@ -83,7 +83,7 @@
     <bahmniReportsVersion>0.92.1</bahmniReportsVersion>
 
     <!-- OpenERP Atomfeed Service -->
-    <openErpAtomfeedServiceVersion>0.93.1</openErpAtomfeedServiceVersion>
+    <forkedOpenErpAtomfeedServiceVersion>0.94-1.0.0</forkedOpenErpAtomfeedServiceVersion>
 
     <!-- Odoo addons -->
     <odooInitializerVersion>1.1.0</odooInitializerVersion>
@@ -107,7 +107,7 @@
       <groupId>org.bahmni.openerp</groupId>
       <artifactId>openerp-atomfeed-service</artifactId>
       <type>war</type>
-      <version>${openErpAtomfeedServiceVersion}</version>
+      <version>${forkedOpenErpAtomfeedServiceVersion}</version>
     </dependency>
     <dependency>
       <groupId>net.mekomsolutions</groupId>
