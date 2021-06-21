@@ -33,9 +33,9 @@
     <openMRSVersion>2.1.3</openMRSVersion>
 
     <!-- Configs -->
-    <openmrsconfigVersion>1.2.2</openmrsconfigVersion>
-    <bahmniconfigVersion>1.2.1</bahmniconfigVersion>
-    <odooconfigVersion>1.0.2</odooconfigVersion>
+    <openmrsconfigVersion>1.3.0-SNAPSHOT</openmrsconfigVersion>
+    <bahmniconfigVersion>1.3.0-SNAPSHOT</bahmniconfigVersion>
+    <odooconfigVersion>1.1.0-SNAPSHOT</odooconfigVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>530808e</bahmniappsRevision>
