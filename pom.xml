@@ -41,6 +41,10 @@
     <bahmniappsRevision>530808e</bahmniappsRevision>
 
     <!-- In dev -->
+    <patientsummaryVersion>2.2-SNAPSHOT</patientsummaryVersion>
+    <serializationVersion>0.2.16-SNAPSHOT</serializationVersion>
+    <commonReportsVersion>1.0.0-SNAPSHOT</commonReportsVersion>
+    <reportingVersion>1.22.0-SNAPSHOT</reportingVersion>
 
     <!-- Bahmni modules -->
     <appointmentsVersion>1.2.1</appointmentsVersion>
@@ -71,9 +75,7 @@
     <openmrsERPVersion>1.0.0</openmrsERPVersion>
     <owaVersion>1.9.0</owaVersion>
     <providermanagementVersion>2.5.0</providermanagementVersion>
-    <reportingVersion>1.16.0</reportingVersion>
     <reportingrestVersion>1.10.0</reportingrestVersion>
-    <serializationVersion>0.2.12</serializationVersion>
     <uicommonsVersion>2.3.0</uicommonsVersion>
     <uiframeworkVersion>3.8</uiframeworkVersion>
     <uilibraryVersion>2.0.5</uilibraryVersion>
@@ -294,6 +296,16 @@
       <groupId>org.openmrs.module</groupId>
       <artifactId>postbahmni-omod</artifactId>
       <version>${postbahmniVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>patientsummary-omod</artifactId>
+      <version>${patientsummaryVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>commonreports-omod</artifactId>
+      <version>${commonReportsVersion}</version>
     </dependency>
 
     <!-- Odoo deps -->
