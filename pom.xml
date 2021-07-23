@@ -45,6 +45,7 @@
     <serializationVersion>0.2.16-SNAPSHOT</serializationVersion>
     <commonReportsVersion>1.0.0-SNAPSHOT</commonReportsVersion>
     <reportingVersion>1.22.0-SNAPSHOT</reportingVersion>
+    <postbahmniVersion>1.2.0-SNAPSHOT</postbahmniVersion>
 
     <!-- Bahmni modules -->
     <appointmentsVersion>1.2.1</appointmentsVersion>
@@ -56,7 +57,7 @@
     <forkedEpisodesVersion>1.0-1.0.0</forkedEpisodesVersion>
     <forkedIdgenwebservicesVersion>1.3-1.0.0</forkedIdgenwebservicesVersion>
     <forkedRulesengineVersion>0.92-1.0.0</forkedRulesengineVersion>
-    <postbahmniVersion>1.0.0</postbahmniVersion>
+    
 
     <!-- OpenMRS modules -->
     <addresshierarchyVersion>2.12.0</addresshierarchyVersion>
