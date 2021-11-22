@@ -3,7 +3,7 @@
   <groupId>net.mekomsolutions</groupId>
   <artifactId>bahmni-distro-haiti</artifactId>
   <name>Haiti distribution</name>
-  <version>1.2.0-SNAPSHOT</version>
+  <version>1.2.0</version>
   <packaging>pom</packaging>
 
   <developers>
@@ -33,19 +33,14 @@
     <openMRSVersion>2.1.3</openMRSVersion>
 
     <!-- Configs -->
-    <openmrsconfigVersion>1.3.0-SNAPSHOT</openmrsconfigVersion>
-    <bahmniconfigVersion>1.3.0-SNAPSHOT</bahmniconfigVersion>
-    <odooconfigVersion>1.1.0-SNAPSHOT</odooconfigVersion>
+    <openmrsconfigVersion>1.3.0</openmrsconfigVersion>
+    <bahmniconfigVersion>1.3.0</bahmniconfigVersion>
+    <odooconfigVersion>1.1.0</odooconfigVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>0849045</bahmniappsRevision>
 
     <!-- In dev -->
-    <patientsummaryVersion>2.2-SNAPSHOT</patientsummaryVersion>
-    <serializationVersion>0.2.16-SNAPSHOT</serializationVersion>
-    <commonReportsVersion>1.0.0-SNAPSHOT</commonReportsVersion>
-    <reportingVersion>1.22.0-SNAPSHOT</reportingVersion>
-    <postbahmniVersion>1.2.0-SNAPSHOT</postbahmniVersion>
 
     <!-- Bahmni modules -->
     <appointmentsVersion>1.2.1</appointmentsVersion>
@@ -57,8 +52,8 @@
     <forkedEpisodesVersion>1.0-1.0.0</forkedEpisodesVersion>
     <forkedIdgenwebservicesVersion>1.3-1.0.0</forkedIdgenwebservicesVersion>
     <forkedRulesengineVersion>0.92-1.0.0</forkedRulesengineVersion>
+    <postbahmniVersion>1.1.0</postbahmniVersion>
     
-
     <!-- OpenMRS modules -->
     <addresshierarchyVersion>2.12.0</addresshierarchyVersion>
     <appframeworkVersion>2.10.0</appframeworkVersion>
@@ -81,12 +76,16 @@
     <uiframeworkVersion>3.8</uiframeworkVersion>
     <uilibraryVersion>2.0.5</uilibraryVersion>
     <webservices.restVersion>2.29.0</webservices.restVersion>
+    <patientsummaryVersion>2.2.0</patientsummaryVersion>
+    <serializationVersion>0.2.15</serializationVersion>
+    <commonReportsVersion>1.0.0</commonReportsVersion>
+    <reportingVersion>1.22.0</reportingVersion>
 
     <!-- Bahmni Reports -->
     <bahmniReportsVersion>0.92.1</bahmniReportsVersion>
 
     <!-- Odoo addons -->
-    <odooInitializerVersion>1.2.0-SNAPSHOT</odooInitializerVersion>
+    <odooInitializerVersion>1.2.0</odooInitializerVersion>
     <priceRecalculationVersion>10.0.1.0.0</priceRecalculationVersion>
 
   </properties>
