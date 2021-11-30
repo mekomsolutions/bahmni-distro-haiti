@@ -33,9 +33,9 @@
     <openMRSVersion>2.1.3</openMRSVersion>
 
     <!-- Configs -->
-    <openmrsconfigVersion>1.3.0</openmrsconfigVersion>
-    <bahmniconfigVersion>1.3.0</bahmniconfigVersion>
-    <odooconfigVersion>1.1.0</odooconfigVersion>
+    <openmrsconfigVersion>1.4.0-SNAPSHOT</openmrsconfigVersion>
+    <bahmniconfigVersion>1.4.0-SNAPSHOT</bahmniconfigVersion>
+    <odooconfigVersion>1.2.0-SNAPSHOT</odooconfigVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>0849045</bahmniappsRevision>
@@ -53,7 +53,7 @@
     <forkedIdgenwebservicesVersion>1.3-1.0.0</forkedIdgenwebservicesVersion>
     <forkedRulesengineVersion>0.92-1.0.0</forkedRulesengineVersion>
     <postbahmniVersion>1.1.0</postbahmniVersion>
-    
+
     <!-- OpenMRS modules -->
     <addresshierarchyVersion>2.12.0</addresshierarchyVersion>
     <appframeworkVersion>2.10.0</appframeworkVersion>
