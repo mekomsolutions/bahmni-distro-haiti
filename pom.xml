@@ -88,6 +88,10 @@
     <odooInitializerVersion>2.0.0-SNAPSHOT</odooInitializerVersion>
     <priceRecalculationVersion>10.0.1.0.0</priceRecalculationVersion>
 
+    <!-- Ozone -->
+    <distro.ozoneTempConfigDir>${distro.baseDir}/ozone_config_temp</distro.ozoneTempConfigDir>
+    <ozoneConfigVersion>1.0.0-SNAPSHOT</ozoneConfigVersion>
+
   </properties>
 
   <dependencies>
@@ -113,6 +117,12 @@
       <artifactId>bahmni-config-haiti</artifactId>
       <type>zip</type>
       <version>${bahmniconfigVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.mekomsolutions</groupId>
+      <artifactId>ozone-config</artifactId>
+      <version>${ozoneConfigVersion}</version>
+      <type>zip</type>
     </dependency>
     <dependency>
       <groupId>net.mekomsolutions</groupId>
@@ -442,6 +452,19 @@
               <includeArtifactIds>bahmniapps</includeArtifactIds>
             </configuration>
           </execution>
+          <execution>
+            <id>unpack-ozone-config</id>
+            <phase>package</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <excludeTransitive>true</excludeTransitive>
+              <useBaseVersion>true</useBaseVersion>
+              <outputDirectory>${distro.ozoneTempConfigDir}</outputDirectory>
+              <includeArtifactIds>ozone-config</includeArtifactIds>
+            </configuration>
+          </execution>
           <!-- Odoo config -->
           <execution>
             <id>copy-odoo-config-haiti</id>
@@ -494,13 +517,30 @@
         <version>1.7</version>
         <executions>
           <execution>
+            <id>copy-ozone-config</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <copy todir="${distro.baseDir}/eip_config">
+                  <fileset dir="${distro.ozoneTempConfigDir}/eip_config">
+                    <exclude name="**/config/senaite-config/**"/>
+                    <exclude name="**/routes/senaite/**"/>
+                  </fileset>
+                </copy>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
             <id>rename-jars-to-omod</id>
             <phase>package</phase>
             <configuration>
               <target>
                 <move todir="${distro.openmrsmodulesDir}">
-                  <fileset dir="${distro.openmrsmodulesDir}"/>
-                  <mapper type="regexp" from="^(.+)-omod-(.+)\.jar" to="\1-\2.omod"/>
+                  <fileset dir="${distro.openmrsmodulesDir}" />
+                  <mapper type="regexp" from="^(.+)-omod-(.+)\.jar" to="\1-\2.omod" />
                 </move>
               </target>
             </configuration>
@@ -514,8 +554,8 @@
             <configuration>
               <target>
                 <move todir="${distro.openmrsconfigDir}">
-                  <fileset dir="${distro.openmrsconfigDir}"/>
-                  <mapper type="regexp" from="^openmrs-config-haiti(.+)\.zip" to="config.zip"/>
+                  <fileset dir="${distro.openmrsconfigDir}" />
+                  <mapper type="regexp" from="^openmrs-config-haiti(.+)\.zip" to="config.zip" />
                 </move>
               </target>
             </configuration>
@@ -529,8 +569,8 @@
             <configuration>
               <target>
                 <move todir="${distro.bahmniconfigDir}">
-                  <fileset dir="${distro.bahmniconfigDir}"/>
-                  <mapper type="regexp" from="^bahmni-config-haiti(.+)\.zip" to="config.zip"/>
+                  <fileset dir="${distro.bahmniconfigDir}" />
+                  <mapper type="regexp" from="^bahmni-config-haiti(.+)\.zip" to="config.zip" />
                 </move>
               </target>
             </configuration>
@@ -571,7 +611,7 @@
             <resource>
               <directory>${project.basedir}</directory>
               <includes>
-                <include>services.yml</include>
+                <include>k8s-services.yml</include>
               </includes>
             </resource>
           </resources>
