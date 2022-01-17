@@ -578,6 +578,21 @@
               <goal>run</goal>
             </goals>
           </execution>
+
+          <execution>
+            <id>clean-ozone-temp-folder</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <delete includeEmptyDirs="true">
+                  <fileset dir="${distro.ozoneTempConfigDir}" />
+                </delete>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
         </executions>
       </plugin>
 
