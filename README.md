@@ -35,4 +35,10 @@ To use it, simply refer to it as a `<parent>` in a child distribution's **pom.xm
 * `openmrs_config/`
 <br/>The OpenMRS bespoke configuration (more [here](https://github.com/mekomsolutions/openmrs-config-haiti)) to be processed by the [Initializer module](https://github.com/mekomsolutions/openmrs-module-initializer).
 * `openmrs_core/`
-The target version of OpenMRS Core.
+<br/>The target version of OpenMRS Core.
+* `odoo_addons/`
+<br/>The Odoo addons needed for the distribution
+* `odoo_config/`
+<br/>The Odoo configuration processed by Odoo Initializer to intialize Odoo with meaningful metadata.
+* `eip_config/`
+<br/>The OpenMRS EIP configuration used for integrating Bahmni with Odoo 14, SENATIE etc...
