@@ -29,7 +29,7 @@
     <distro.bahmnireportsDir>${distro.baseDir}/bahmni_reports</distro.bahmnireportsDir>
     <distro.openerpatomfeedserviceDir>${distro.baseDir}/openerp_atomfeed_service</distro.openerpatomfeedserviceDir>
 
-    <!-- eip override properties -->
+    <!-- EIP override properties -->
     <db-event.destinations>direct:odoo-event-listener</db-event.destinations>
     <create.customer.if.not.exist>false</create.customer.if.not.exist>
 
