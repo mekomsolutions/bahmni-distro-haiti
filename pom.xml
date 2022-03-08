@@ -32,6 +32,7 @@
     <!-- EIP override properties -->
     <db-event.destinations>direct:odoo-event-listener</db-event.destinations>
     <create.customer.if.not.exist>false</create.customer.if.not.exist>
+    <openmrs.identifier.type.uuid>b303f207-a094-457f-9833-f1cdc7b5d184</openmrs.identifier.type.uuid>
 
     <!-- Core -->
     <openMRSVersion>2.1.3</openMRSVersion>
@@ -598,6 +599,7 @@
           <script>
               sed -i "s/\(db-event\.destinations=\).*\$/\1${db-event.destinations}/" ${distro.baseDir}/eip_config/config/application.properties
               sed -i "s/\(create\.customer\.if\.not\.exist=\).*\$/\1${create.customer.if.not.exist}/" ${distro.baseDir}/eip_config/config/odoo-config/application.properties
+              sed -i "s/\(openmrs\.identifier\.type\.uuid=\).*\$/\1${openmrs.identifier.type.uuid}/" ${distro.baseDir}/eip_config/config/application.properties
             </script>
         </configuration>
       </plugin>
@@ -694,6 +696,14 @@
       <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
       <snapshots>
         <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>mks-nexus-snapshots</id>
+      <name>OpenMRS Nexus Repository</name>
+      <url>https://nexus.mekomsolutions.net/repository/maven-snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
