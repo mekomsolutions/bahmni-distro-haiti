@@ -42,3 +42,10 @@ To use it, simply refer to it as a `<parent>` in a child distribution's **pom.xm
 <br/>The Odoo configuration processed by Odoo Initializer to intialize Odoo with meaningful metadata.
 * `eip_config/`
 <br/>The OpenMRS EIP configuration used for integrating Bahmni with Odoo 14, SENATIE etc...
+
+#### Building on Mac
+
+We currently use `sed` to update property files and the `sed` on linux is different from the `sed` on Mac. 
+So you need to use the maven docker image to build on Mac.
+
+```docker run -v <path-to-distro>/bahmni-distro-haiti:/bahmni-distro-haiti -v <path-to-home-folder>/.m2:/root/.m2 -it maven /bin/bash```
