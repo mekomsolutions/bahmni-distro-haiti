@@ -89,7 +89,7 @@
     <bahmniReportsVersion>0.92.1</bahmniReportsVersion>
 
     <!-- Odoo addons -->
-    <odooInitializerVersion>2.0.0</odooInitializerVersion>
+    <odooInitializerVersion>2.2.0-SNAPSHOT</odooInitializerVersion>
     <priceRecalculationVersion>10.0.1.0.0</priceRecalculationVersion>
 
     <!-- Ozone -->
