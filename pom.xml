@@ -94,7 +94,7 @@
 
     <!-- Ozone -->
     <distro.ozoneTempConfigDir>${distro.baseDir}/ozone_config_temp</distro.ozoneTempConfigDir>
-    <ozoneConfigVersion>1.0.0-beta1</ozoneConfigVersion>
+    <ozoneConfigVersion>1.0.0-beta2</ozoneConfigVersion>
 
   </properties>
 
