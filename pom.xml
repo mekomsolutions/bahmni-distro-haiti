@@ -82,7 +82,7 @@
     <webservices.restVersion>2.29.0</webservices.restVersion>
     <patientsummaryVersion>2.2.0</patientsummaryVersion>
     <serializationVersion>0.2.15</serializationVersion>
-    <commonReportsVersion>1.2.0-SNAPSHOT</commonReportsVersion>
+    <commonReportsVersion>1.2.0</commonReportsVersion>
     <reportingVersion>1.22.0</reportingVersion>
 
     <!-- Bahmni Reports -->
