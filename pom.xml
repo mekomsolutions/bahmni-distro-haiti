@@ -332,6 +332,12 @@
       <version>${priceRecalculationVersion}</version>
       <type>zip</type>
     </dependency>
+    <dependency>
+      <groupId>net.mekomsolutions.odoo</groupId>
+      <artifactId>bulk_cancel_orders</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+    </dependency>
 
   </dependencies>
 
