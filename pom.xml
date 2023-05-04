@@ -52,7 +52,7 @@
     <bedmanagementVersion>5.11.0</bedmanagementVersion>
     <forkedEpisodesVersion>1.0-1.0.0</forkedEpisodesVersion>
     <forkedIdgenwebservicesVersion>1.3-1.0.0</forkedIdgenwebservicesVersion>
-    <forkedRulesengineVersion>0.92-1.0.0</forkedRulesengineVersion>
+    <rulesengineVersion>1.0.0</rulesengineVersion>
 
     <!-- OpenMRS modules -->
     <addresshierarchyVersion>2.12.0</addresshierarchyVersion>
@@ -137,9 +137,9 @@
       <type>war</type>
     </dependency>
     <dependency>
-      <groupId>org.openmrs.module</groupId>
+      <groupId>org.bahmni.module</groupId>
       <artifactId>rulesengine-omod</artifactId>
-      <version>${forkedRulesengineVersion}</version>
+      <version>${rulesengineVersion}</version>
     </dependency>
     <dependency>
       <groupId>org.bahmni.module</groupId>
