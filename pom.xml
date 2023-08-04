@@ -90,7 +90,7 @@
 
     <!-- Ozone -->
     <distro.ozoneTempConfigDir>${distro.baseDir}/ozone_config_temp</distro.ozoneTempConfigDir>
-    <ozoneConfigVersion>1.4.0-SNAPSHOT</ozoneConfigVersion>
+    <ozoneConfigVersion>1.5.0-SNAPSHOT</ozoneConfigVersion>
 
   </properties>
 
