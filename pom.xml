@@ -3,7 +3,7 @@
   <groupId>net.mekomsolutions</groupId>
   <artifactId>bahmni-distro-haiti</artifactId>
   <name>Haiti distribution</name>
-  <version>2.7.0-SNAPSHOT</version>
+  <version>2.7.0</version>
   <packaging>pom</packaging>
 
   <developers>
@@ -34,9 +34,9 @@
     <openMRSVersion>2.1.3</openMRSVersion>
 
     <!-- Configs -->
-    <openmrsconfigVersion>1.9.0-SNAPSHOT</openmrsconfigVersion>
-    <bahmniconfigVersion>1.9.0-SNAPSHOT</bahmniconfigVersion>
-    <odooconfigVersion>2.4.0-SNAPSHOT</odooconfigVersion>
+    <openmrsconfigVersion>1.8.1</openmrsconfigVersion>
+    <bahmniconfigVersion>1.8.0</bahmniconfigVersion>
+    <odooconfigVersion>2.3.0</odooconfigVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>02a4a37</bahmniappsRevision>
@@ -63,7 +63,7 @@
     <eventVersion>2.8.0</eventVersion>
     <htmlwidgetsVersion>1.8.0</htmlwidgetsVersion>
     <idgenVersion>4.6.0</idgenVersion>
-    <initializerVersion>2.3.0</initializerVersion>
+    <initializerVersion>2.3.1</initializerVersion>
     <legacyuiVersion>1.3.3</legacyuiVersion>
     <metadatamappingVersion>1.3.1</metadatamappingVersion>
     <metadatasharingVersion>1.8.0</metadatasharingVersion>
