@@ -28,6 +28,7 @@
     <distro.openmrsmodulesDir>${distro.baseDir}/openmrs_modules</distro.openmrsmodulesDir>
     <distro.bahmnireportsDir>${distro.baseDir}/bahmni_reports</distro.bahmnireportsDir>
     <distro.openerpatomfeedserviceDir>${distro.baseDir}/openerp_atomfeed_service</distro.openerpatomfeedserviceDir>
+    <distro.analyticsConfigDir>${distro.baseDir}/analytics_config</distro.analyticsConfigDir>
 
 
     <!-- Core -->
@@ -508,6 +509,20 @@
                     <exclude name="**/config/senaite-config/**" />
                     <exclude name="**/routes/senaite/**" />
                   </fileset>
+                </copy>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>copy-analytics-config</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <copy todir="${distro.analyticsConfigDir}">
+                  <fileset dir="${project.basedir}/analytics_config"></fileset>
                 </copy>
               </target>
             </configuration>
