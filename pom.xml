@@ -28,6 +28,7 @@
     <distro.openmrsmodulesDir>${distro.baseDir}/openmrs_modules</distro.openmrsmodulesDir>
     <distro.bahmnireportsDir>${distro.baseDir}/bahmni_reports</distro.bahmnireportsDir>
     <distro.openerpatomfeedserviceDir>${distro.baseDir}/openerp_atomfeed_service</distro.openerpatomfeedserviceDir>
+    <distro.analyticsconfigDir>${distro.baseDir}/analytics_config</distro.analyticsconfigDir>
 
 
     <!-- Core -->
@@ -91,6 +92,7 @@
     <!-- Ozone -->
     <distro.ozoneTempConfigDir>${distro.baseDir}/ozone_config_temp</distro.ozoneTempConfigDir>
     <ozoneConfigVersion>1.5.0</ozoneConfigVersion>
+    <analyticsQueriesVersion>1.0.0-SNAPSHOT</analyticsQueriesVersion>
 
   </properties>
 
@@ -308,6 +310,14 @@
       <version>${commonReportsVersion}</version>
     </dependency>
 
+    <!-- Ozone Analytics Queries -->
+    <dependency>
+      <groupId>com.ozonehis</groupId>
+      <artifactId>analytics-queries</artifactId>
+      <version>${analyticsQueriesVersion}</version>
+      <type>zip</type>
+    </dependency>
+
     <!-- Odoo deps -->
     <dependency>
       <groupId>net.mekomsolutions</groupId>
@@ -406,6 +416,22 @@
               <includeArtifactIds>openmrs-config-haiti</includeArtifactIds>
             </configuration>
           </execution>
+
+          <!-- Ozone analytics queries -->
+          <execution>
+            <id>Copy Analytics Queries</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <excludeTransitive>true</excludeTransitive>
+              <useBaseVersion>true</useBaseVersion>
+              <outputDirectory>${distro.analyticsconfigDir}</outputDirectory>
+              <includeArtifactIds>analytics-queries</includeArtifactIds>
+            </configuration>
+          </execution>
+
           <!-- Bahmni config -->
           <execution>
             <id>unpack-bahmni-config-haiti</id>
@@ -602,17 +628,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <version>3.2.0</version>
-        <configuration>
-          <outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}</outputDirectory>
-          <resources>
-            <resource>
-              <directory>${project.basedir}</directory>
-              <includes>
-                <include>k8s-services.yml</include>
-              </includes>
-            </resource>
-          </resources>
-        </configuration>
         <executions>
           <execution>
             <id>copy-resources</id>
@@ -620,6 +635,35 @@
             <goals>
               <goal>copy-resources</goal>
             </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}</directory>
+                  <includes>
+                    <include>k8s-services.yml</include>
+                  </includes>
+                </resource>
+              </resources>
+          </configuration>
+          </execution>
+
+          <!-- Copy local analytics queries/configs -->
+          <execution>            
+            <id>Copy local Analytics Query/config overrides</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${distro.analyticsconfigDir}</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/analytics_config</directory>
+                </resource>
+              </resources>
+            </configuration>
           </execution>
         </executions>
       </plugin>
