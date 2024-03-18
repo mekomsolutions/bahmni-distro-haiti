@@ -12,4 +12,25 @@
 	    </preConditions>
 	    <renameColumn tableName="conditions" oldColumnName="previous_version" newColumnName="previous_condition_id"/>
 	</changeSet>
+	<changeSet author="ruhanga" id="1710762363-1">
+	    <preConditions onFail="MARK_RAN">
+	        <columnExists tableName="conditions" columnName="condition_coded"/>
+	    </preConditions>
+	    <renameColumn tableName="conditions" oldColumnName="condition_coded" newColumnName="concept_id"/>
+	</changeSet>
+	<changeSet author="ruhanga" id="1710762363-2">
+	    <preConditions onFail="MARK_RAN">
+	        <columnExists tableName="conditions" columnName="clinical_status"/>
+	    </preConditions>
+	    <renameColumn tableName="conditions" oldColumnName="clinical_status" newColumnName="status"/>
+	</changeSet>
+	<changeSet author="ruhanga" id="1710762363-3">
+	    <dropColumn tableName="conditions" columnName="condition_coded_name"/>
+	</changeSet>
+	<changeSet author="ruhanga" id="1710762363-4">
+	    <dropColumn tableName="conditions" columnName="verification_status"/>
+	</changeSet>
+	<changeSet author="ruhanga" id="1710762363-5">
+	    <dropColumn tableName="conditions" columnName="changed_by"/>
+	</changeSet>
 </databaseChangeLog>
