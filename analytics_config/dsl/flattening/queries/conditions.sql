@@ -2,11 +2,9 @@ select
   `condition_id`,
   `additional_detail`,
   `previous_condition_id`,
-  `condition_coded`,
+  `concept_id`,
   `condition_non_coded`,
-  `condition_coded_name`,
-  `clinical_status`,
-  `verification_status`,
+  `status`,
   `onset_date`,
   `date_created`,
   `voided`,
@@ -15,7 +13,6 @@ select
   `uuid`,
   `creator`,
   `voided_by`,
-  `changed_by`,
   `patient_id`,
   `end_date`
 from
