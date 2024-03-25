@@ -601,6 +601,20 @@
               <goal>run</goal>
             </goals>
           </execution>
+
+          <execution>
+            <id>delete-unanted-ozone-analytics-queries</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <delete dir="${distro.analyticsconfigDir}" includes="**/encounter_diagnosis*"/>
+                <delete dir="${distro.analyticsconfigDir}" includes="**/encounter_diagnoses*"/>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
         </executions>
       </plugin>
 
