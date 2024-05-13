@@ -41,7 +41,7 @@ To use it, simply refer to it as a `<parent>` in a child distribution's **pom.xm
 * `odoo_config/`
 <br/>The Odoo configuration processed by Odoo Initializer to intialize Odoo with meaningful metadata.
 * `eip_config/`
-<br/>The OpenMRS EIP configuration used for integrating Bahmni with Odoo 14, SENATIE etc...
+<br/>The OpenMRS EIP configuration used for integrating Bahmni with Odoo 14, SENAITE etc...
 
 #### Building on Mac
 
