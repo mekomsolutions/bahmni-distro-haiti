@@ -108,18 +108,18 @@
       <type>war</type>
       <version>${bahmniReportsVersion}</version>
     </dependency>
-    <dependency>
-      <groupId>net.mekomsolutions</groupId>
-      <artifactId>openmrs-config-haiti</artifactId>
-      <type>zip</type>
-      <version>${openmrsconfigVersion}</version>
-    </dependency>
-    <dependency>
-      <groupId>net.mekomsolutions</groupId>
-      <artifactId>bahmni-config-haiti</artifactId>
-      <type>zip</type>
-      <version>${bahmniconfigVersion}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>net.mekomsolutions</groupId>-->
+<!--      <artifactId>openmrs-config-haiti</artifactId>-->
+<!--      <type>zip</type>-->
+<!--      <version>${openmrsconfigVersion}</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>net.mekomsolutions</groupId>-->
+<!--      <artifactId>bahmni-config-haiti</artifactId>-->
+<!--      <type>zip</type>-->
+<!--      <version>${bahmniconfigVersion}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>com.ozonehis</groupId>
       <artifactId>ozone-config</artifactId>
@@ -403,19 +403,19 @@
             </configuration>
           </execution>
           <!-- OpenMRS config -->
-          <execution>
-            <id>unpack-openmrs-config-haiti</id>
-            <phase>package</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
-              <includeArtifactIds>openmrs-config-haiti</includeArtifactIds>
-            </configuration>
-          </execution>
+<!--          <execution>-->
+<!--            <id>unpack-openmrs-config-haiti</id>-->
+<!--            <phase>package</phase>-->
+<!--            <goals>-->
+<!--              <goal>unpack-dependencies</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <excludeTransitive>true</excludeTransitive>-->
+<!--              <useBaseVersion>true</useBaseVersion>-->
+<!--              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>-->
+<!--              <includeArtifactIds>openmrs-config-haiti</includeArtifactIds>-->
+<!--            </configuration>-->
+<!--          </execution>-->
 
           <!-- Ozone analytics queries -->
           <execution>
@@ -433,19 +433,19 @@
           </execution>
 
           <!-- Bahmni config -->
-          <execution>
-            <id>unpack-bahmni-config-haiti</id>
-            <phase>package</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>
-              <includeArtifactIds>bahmni-config-haiti</includeArtifactIds>
-            </configuration>
-          </execution>
+<!--          <execution>-->
+<!--            <id>unpack-bahmni-config-haiti</id>-->
+<!--            <phase>package</phase>-->
+<!--            <goals>-->
+<!--              <goal>unpack-dependencies</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <excludeTransitive>true</excludeTransitive>-->
+<!--              <useBaseVersion>true</useBaseVersion>-->
+<!--              <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>-->
+<!--              <includeArtifactIds>bahmni-config-haiti</includeArtifactIds>-->
+<!--            </configuration>-->
+<!--          </execution>-->
           <!-- Bahmni Apps -->
           <execution>
             <id>unpack-bahmniapps</id>
@@ -675,6 +675,42 @@
               <resources>
                 <resource>
                   <directory>${project.basedir}/analytics_config</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <!-- Copy openmrs configs -->
+            <id>Copy local openmrs config resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/openmrs_config</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <!-- Copy bahmni configs -->
+            <id>Copy local bahmni config resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/bahmni_config</directory>
                 </resource>
               </resources>
             </configuration>
