@@ -108,18 +108,6 @@
       <type>war</type>
       <version>${bahmniReportsVersion}</version>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>net.mekomsolutions</groupId>-->
-<!--      <artifactId>openmrs-config-haiti</artifactId>-->
-<!--      <type>zip</type>-->
-<!--      <version>${openmrsconfigVersion}</version>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>net.mekomsolutions</groupId>-->
-<!--      <artifactId>bahmni-config-haiti</artifactId>-->
-<!--      <type>zip</type>-->
-<!--      <version>${bahmniconfigVersion}</version>-->
-<!--    </dependency>-->
     <dependency>
       <groupId>com.ozonehis</groupId>
       <artifactId>ozone-config</artifactId>
@@ -319,12 +307,6 @@
     </dependency>
 
     <!-- Odoo deps -->
-<!--    <dependency>-->
-<!--      <groupId>net.mekomsolutions</groupId>-->
-<!--      <artifactId>odoo-config-haiti</artifactId>-->
-<!--      <type>zip</type>-->
-<!--      <version>${odooconfigVersion}</version>-->
-<!--    </dependency>-->
     <dependency>
       <groupId>net.mekomsolutions.odoo</groupId>
       <artifactId>odoo_initializer</artifactId>
@@ -402,20 +384,6 @@
               <includeTypes>jar, omod</includeTypes>
             </configuration>
           </execution>
-          <!-- OpenMRS config -->
-<!--          <execution>-->
-<!--            <id>unpack-openmrs-config-haiti</id>-->
-<!--            <phase>package</phase>-->
-<!--            <goals>-->
-<!--              <goal>unpack-dependencies</goal>-->
-<!--            </goals>-->
-<!--            <configuration>-->
-<!--              <excludeTransitive>true</excludeTransitive>-->
-<!--              <useBaseVersion>true</useBaseVersion>-->
-<!--              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>-->
-<!--              <includeArtifactIds>openmrs-config-haiti</includeArtifactIds>-->
-<!--            </configuration>-->
-<!--          </execution>-->
 
           <!-- Ozone analytics queries -->
           <execution>
@@ -432,20 +400,6 @@
             </configuration>
           </execution>
 
-          <!-- Bahmni config -->
-<!--          <execution>-->
-<!--            <id>unpack-bahmni-config-haiti</id>-->
-<!--            <phase>package</phase>-->
-<!--            <goals>-->
-<!--              <goal>unpack-dependencies</goal>-->
-<!--            </goals>-->
-<!--            <configuration>-->
-<!--              <excludeTransitive>true</excludeTransitive>-->
-<!--              <useBaseVersion>true</useBaseVersion>-->
-<!--              <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>-->
-<!--              <includeArtifactIds>bahmni-config-haiti</includeArtifactIds>-->
-<!--            </configuration>-->
-<!--          </execution>-->
           <!-- Bahmni Apps -->
           <execution>
             <id>unpack-bahmniapps</id>
@@ -473,20 +427,7 @@
               <includeArtifactIds>ozone-config</includeArtifactIds>
             </configuration>
           </execution>
-          <!-- Odoo config -->
-<!--          <execution>-->
-<!--            <id>copy-odoo-config-haiti</id>-->
-<!--            <phase>package</phase>-->
-<!--            <goals>-->
-<!--              <goal>unpack-dependencies</goal>-->
-<!--            </goals>-->
-<!--            <configuration>-->
-<!--              <excludeTransitive>true</excludeTransitive>-->
-<!--              <useBaseVersion>true</useBaseVersion>-->
-<!--              <outputDirectory>${distro.odooconfigDir}</outputDirectory>-->
-<!--              <includeArtifactIds>odoo-config-haiti</includeArtifactIds>-->
-<!--            </configuration>-->
-<!--          </execution>-->
+
           <!-- Odoo addons -->
           <execution>
             <id>copy-odoo-addons-haiti</id>
