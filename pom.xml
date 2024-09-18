@@ -319,12 +319,12 @@
     </dependency>
 
     <!-- Odoo deps -->
-    <dependency>
-      <groupId>net.mekomsolutions</groupId>
-      <artifactId>odoo-config-haiti</artifactId>
-      <type>zip</type>
-      <version>${odooconfigVersion}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>net.mekomsolutions</groupId>-->
+<!--      <artifactId>odoo-config-haiti</artifactId>-->
+<!--      <type>zip</type>-->
+<!--      <version>${odooconfigVersion}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>net.mekomsolutions.odoo</groupId>
       <artifactId>odoo_initializer</artifactId>
@@ -474,19 +474,19 @@
             </configuration>
           </execution>
           <!-- Odoo config -->
-          <execution>
-            <id>copy-odoo-config-haiti</id>
-            <phase>package</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.odooconfigDir}</outputDirectory>
-              <includeArtifactIds>odoo-config-haiti</includeArtifactIds>
-            </configuration>
-          </execution>
+<!--          <execution>-->
+<!--            <id>copy-odoo-config-haiti</id>-->
+<!--            <phase>package</phase>-->
+<!--            <goals>-->
+<!--              <goal>unpack-dependencies</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <excludeTransitive>true</excludeTransitive>-->
+<!--              <useBaseVersion>true</useBaseVersion>-->
+<!--              <outputDirectory>${distro.odooconfigDir}</outputDirectory>-->
+<!--              <includeArtifactIds>odoo-config-haiti</includeArtifactIds>-->
+<!--            </configuration>-->
+<!--          </execution>-->
           <!-- Odoo addons -->
           <execution>
             <id>copy-odoo-addons-haiti</id>
@@ -711,6 +711,24 @@
               <resources>
                 <resource>
                   <directory>${project.basedir}/bahmni_config</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <!-- Copy odoo configs -->
+            <id>Copy local odoo config resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${distro.odooconfigDir}</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/odoo_config</directory>
                 </resource>
               </resources>
             </configuration>
