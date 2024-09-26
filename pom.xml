@@ -615,7 +615,7 @@
               <overwrite>true</overwrite>
               <resources>
                 <resource>
-                  <directory>${project.basedir}/analytics_config</directory>
+                  <directory>${project.basedir}/configs/analytics_config</directory>
                 </resource>
               </resources>
             </configuration>
@@ -633,7 +633,7 @@
               <overwrite>true</overwrite>
               <resources>
                 <resource>
-                  <directory>${project.basedir}/openmrs_config</directory>
+                  <directory>${project.basedir}/configs/openmrs_config</directory>
                 </resource>
               </resources>
             </configuration>
@@ -651,7 +651,7 @@
               <overwrite>true</overwrite>
               <resources>
                 <resource>
-                  <directory>${project.basedir}/bahmni_config</directory>
+                  <directory>${project.basedir}/configs/bahmni_config</directory>
                 </resource>
               </resources>
             </configuration>
@@ -669,7 +669,7 @@
               <overwrite>true</overwrite>
               <resources>
                 <resource>
-                  <directory>${project.basedir}/odoo_config</directory>
+                  <directory>${project.basedir}/configs/odoo_config</directory>
                 </resource>
               </resources>
             </configuration>
