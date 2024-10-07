@@ -109,18 +109,6 @@
       <version>${bahmniReportsVersion}</version>
     </dependency>
     <dependency>
-      <groupId>net.mekomsolutions</groupId>
-      <artifactId>openmrs-config-haiti</artifactId>
-      <type>zip</type>
-      <version>${openmrsconfigVersion}</version>
-    </dependency>
-    <dependency>
-      <groupId>net.mekomsolutions</groupId>
-      <artifactId>bahmni-config-haiti</artifactId>
-      <type>zip</type>
-      <version>${bahmniconfigVersion}</version>
-    </dependency>
-    <dependency>
       <groupId>com.ozonehis</groupId>
       <artifactId>ozone-config</artifactId>
       <version>${ozoneConfigVersion}</version>
@@ -320,12 +308,6 @@
 
     <!-- Odoo deps -->
     <dependency>
-      <groupId>net.mekomsolutions</groupId>
-      <artifactId>odoo-config-haiti</artifactId>
-      <type>zip</type>
-      <version>${odooconfigVersion}</version>
-    </dependency>
-    <dependency>
       <groupId>net.mekomsolutions.odoo</groupId>
       <artifactId>odoo_initializer</artifactId>
       <version>${odooInitializerVersion}</version>
@@ -402,20 +384,6 @@
               <includeTypes>jar, omod</includeTypes>
             </configuration>
           </execution>
-          <!-- OpenMRS config -->
-          <execution>
-            <id>unpack-openmrs-config-haiti</id>
-            <phase>package</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
-              <includeArtifactIds>openmrs-config-haiti</includeArtifactIds>
-            </configuration>
-          </execution>
 
           <!-- Ozone analytics queries -->
           <execution>
@@ -432,20 +400,6 @@
             </configuration>
           </execution>
 
-          <!-- Bahmni config -->
-          <execution>
-            <id>unpack-bahmni-config-haiti</id>
-            <phase>package</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>
-              <includeArtifactIds>bahmni-config-haiti</includeArtifactIds>
-            </configuration>
-          </execution>
           <!-- Bahmni Apps -->
           <execution>
             <id>unpack-bahmniapps</id>
@@ -473,20 +427,7 @@
               <includeArtifactIds>ozone-config</includeArtifactIds>
             </configuration>
           </execution>
-          <!-- Odoo config -->
-          <execution>
-            <id>copy-odoo-config-haiti</id>
-            <phase>package</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.odooconfigDir}</outputDirectory>
-              <includeArtifactIds>odoo-config-haiti</includeArtifactIds>
-            </configuration>
-          </execution>
+
           <!-- Odoo addons -->
           <execution>
             <id>copy-odoo-addons-haiti</id>
@@ -674,7 +615,61 @@
               <overwrite>true</overwrite>
               <resources>
                 <resource>
-                  <directory>${project.basedir}/analytics_config</directory>
+                  <directory>${project.basedir}/configs/analytics</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <!-- Copy openmrs configs -->
+            <id>Copy local openmrs config resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/configs/openmrs/initializer</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <!-- Copy bahmni configs -->
+            <id>Copy local bahmni config resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/configs/bahmni</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <!-- Copy odoo configs -->
+            <id>Copy local odoo config resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${distro.odooconfigDir}</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/configs/odoo/initializer</directory>
                 </resource>
               </resources>
             </configuration>
