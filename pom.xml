@@ -550,12 +550,13 @@
         <executions>
           <execution>
             <id>copy-resources</id>
-            <phase>validate</phase>
+            <phase>process-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}</outputDirectory>
+              <outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}/</outputDirectory>
+              <overwrite>true</overwrite>
               <resources>
                 <resource>
                   <directory>${project.basedir}</directory>
@@ -588,12 +589,12 @@
           <execution>
             <!-- Copy openmrs configs -->
             <id>Copy local openmrs config resources</id>
-            <phase>prepare-package</phase>
+            <phase>process-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
+              <outputDirectory>${distro.openmrsconfigDir}/</outputDirectory>
               <overwrite>true</overwrite>
               <resources>
                 <resource>
@@ -606,12 +607,12 @@
           <execution>
             <!-- Copy bahmni configs -->
             <id>Copy local bahmni config resources</id>
-            <phase>prepare-package</phase>
+            <phase>process-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>
+              <outputDirectory>${distro.bahmniconfigDir}/</outputDirectory>
               <overwrite>true</overwrite>
               <resources>
                 <resource>
@@ -624,12 +625,12 @@
           <execution>
             <!-- Copy odoo configs -->
             <id>Copy local odoo config resources</id>
-            <phase>prepare-package</phase>
+            <phase>process-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${distro.odooconfigDir}</outputDirectory>
+              <outputDirectory>${distro.odooconfigDir}/</outputDirectory>
               <overwrite>true</overwrite>
               <resources>
                 <resource>
