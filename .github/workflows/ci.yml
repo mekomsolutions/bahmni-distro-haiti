@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  release:
+    types: [published]
+
+jobs:
+  build:
+    uses: mekomsolutions/shared-github-workflow/.github/workflows/maven-build-test.yml@main
+    with:
+      java-version: "8"
+      maven-args: "-P validator" #  OMRS config validation
+    secrets:
+      NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+      NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
