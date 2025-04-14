@@ -87,7 +87,7 @@
     <!-- Ozone -->
     <distro.ozoneTempConfigDir>${distro.baseDir}/ozone_config_temp</distro.ozoneTempConfigDir>
     <ozoneConfigVersion>1.5.0</ozoneConfigVersion>
-    <analyticsQueriesVersion>1.3.0-SNAPSHOT</analyticsQueriesVersion>
+    <analyticsQueriesVersion>1.4.0-SNAPSHOT</analyticsQueriesVersion>
 
   </properties>
 
