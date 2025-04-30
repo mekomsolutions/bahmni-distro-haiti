@@ -82,6 +82,7 @@
 
     <!-- Odoo addons -->
     <odooInitializerVersion>2.1.0</odooInitializerVersion>
+    <odooAutoRoundingVersion>1.0.0</odooAutoRoundingVersion>
     <priceRecalculationVersion>10.0.1.0.0</priceRecalculationVersion>
 
     <!-- Ozone -->
@@ -306,6 +307,12 @@
       <groupId>net.mekomsolutions.odoo</groupId>
       <artifactId>odoo_initializer</artifactId>
       <version>${odooInitializerVersion}</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>net.mekomsolutions.odoo</groupId>
+      <artifactId>odoo-auto-rounding</artifactId>
+      <version>${odooAutoRoundingVersion}</version>
       <type>zip</type>
     </dependency>
     <dependency>
