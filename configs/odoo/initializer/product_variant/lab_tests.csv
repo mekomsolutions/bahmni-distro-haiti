@@ -2,6 +2,7 @@ id,name,categ_id/id,type,purchase_ok,invoice_policy
 init.91d1dba5-bd31-4f0f-857a-1fae38165a6d,Glycemie,product.categ_services_lab_test_orders,service,FALSE,Ordered quantities
 init.00ce9624-11e3-4015-b695-d7ff7cb3930e,Groupe sanguin,product.categ_services_lab_test_orders,service,FALSE,Ordered quantities
 init.508c9da4-56f9-4129-9a0e-766fb8e74f3e,Malaria,product.categ_services_lab_test_orders,service,FALSE,Ordered quantities
+init.8cf4837d-33f8-4d15-ac34-bd3194384d57,Malaria microscopic test,product.categ_services_lab_test_orders,service,FALSE,Ordered quantities
 init.7036964e-e177-465e-8af8-b1b761f290c5,Vitesse de sedimentation,product.categ_services_lab_test_orders,service,FALSE,Ordered quantities
 init.a60b7de5-d126-4b28-8efc-2a81de5165f0,Widal,product.categ_services_lab_test_orders,service,FALSE,Ordered quantities
 init.92f1d76a-4091-4b99-83d4-633b5fbd096e,H. Pylori (Sang),product.categ_services_lab_test_orders,service,FALSE,Ordered quantities
