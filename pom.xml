@@ -82,6 +82,7 @@
 
     <!-- Odoo addons -->
     <odooInitializerVersion>2.1.0</odooInitializerVersion>
+    <odooAutoRoundingVersion>1.0.0-SNAPSHOT</odooAutoRoundingVersion>
     <priceRecalculationVersion>10.0.1.0.0</priceRecalculationVersion>
 
     <!-- Ozone -->
@@ -309,6 +310,12 @@
       <type>zip</type>
     </dependency>
     <dependency>
+      <groupId>net.mekomsolutions.odoo</groupId>
+      <artifactId>odoo-auto-rounding</artifactId>
+      <version>${odooAutoRoundingVersion}</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
       <groupId>org.openmrs.module</groupId>
       <artifactId>erp-omod</artifactId>
       <version>${openmrsERPVersion}</version>
@@ -520,6 +527,20 @@
               <goal>run</goal>
             </goals>
           </execution>
+          <execution>
+            <id>rename-odoo-auto-rounding-directory</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <move file="${distro.odooAddonsDir}/odoo-auto-rounding-${odooAutoRoundingVersion}"
+                      tofile="${distro.odooAddonsDir}/auto_rounding"/>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+
         </executions>
       </plugin>
 
