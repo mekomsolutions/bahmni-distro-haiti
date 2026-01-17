@@ -89,6 +89,9 @@
     <distro.ozoneTempConfigDir>${distro.baseDir}/ozone_config_temp</distro.ozoneTempConfigDir>
     <ozoneConfigVersion>1.5.0</ozoneConfigVersion>
     <analyticsQueriesVersion>1.3.0</analyticsQueriesVersion>
+            
+    <!-- Classifier for the dependency report artifact -->
+    <dependencyReportClassifier>dependencies</dependencyReportClassifier>
 
   </properties>
 
@@ -532,8 +535,8 @@
             <phase>package</phase>
             <configuration>
               <target>
-                <delete dir="${distro.analyticsconfigDir}" includes="**/encounter_diagnosis*"/>
-                <delete dir="${distro.analyticsconfigDir}" includes="**/encounter_diagnoses*"/>
+                <delete dir="${distro.analyticsconfigDir}" includes="**/encounter_diagnosis*" />
+                <delete dir="${distro.analyticsconfigDir}" includes="**/encounter_diagnoses*" />
               </target>
             </configuration>
             <goals>
@@ -544,7 +547,7 @@
       </plugin>
 
       <!-- packaging the distro as a installable/deployable file -->
-       <plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
@@ -562,7 +565,7 @@
             </configuration>
           </execution>
         </executions>
-      </plugin> 
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
@@ -585,11 +588,11 @@
                   </includes>
                 </resource>
               </resources>
-          </configuration>
+            </configuration>
           </execution>
 
           <!-- Copy local analytics queries/configs -->
-          <execution>            
+          <execution>
             <id>Copy local Analytics Query/config overrides</id>
             <phase>prepare-package</phase>
             <goals>
@@ -657,6 +660,50 @@
                   <directory>${project.basedir}/configs/odoo/initializer</directory>
                 </resource>
               </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Compile and compare the dependency report -->
+      <plugin>
+        <groupId>net.mekomsolutions.maven.plugin</groupId>
+        <artifactId>dependency-tracker-maven-plugin</artifactId>
+        <version>1.1.0-SNAPSHOT</version>
+        <configuration>
+          <compare>true</compare>
+        </configuration>
+        <executions>
+          <execution>
+            <id>Compile local dependency report and compare with remote</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>track</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Attach the dependency report to the build -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <id>Attach the dependency report</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attach-artifact</goal>
+            </goals>
+            <configuration>
+              <artifacts>
+                <artifact>
+                  <file>
+                    ${project.build.directory}/${project.artifactId}-${project.version}-dependencies.txt
+                  </file>
+                  <type>txt</type>
+                  <classifier>${dependencyReportClassifier}</classifier>
+                </artifact>
+              </artifacts>
             </configuration>
           </execution>
         </executions>
